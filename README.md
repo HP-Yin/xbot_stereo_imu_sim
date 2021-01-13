@@ -11,7 +11,14 @@ $ cd src
 $ git clone https://github.com/HP-Yin/xbot_stereo_imu_sim.git  
 $ cd ..  
 $ source devel/setup.bash  
-$ roslaunch xbot_stereo_imu_sim stereo_imu_node.launch  
+```
+A museum environment:  
+```sh
+$ roslaunch xbot_stereo_imu_sim xbot_museum.launch  
+```
+An empty environment:  
+```sh
+$ roslaunch xbot_stereo_imu_sim xbot_empty.launch  
 ```
 new terminal  
 ```sh

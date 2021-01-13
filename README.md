@@ -1,5 +1,6 @@
 # xbot_stereo_imu_sim 
 Gazebo simulation for mobile robot with stereo camera and IMU  
+Reference: https://github.com/DroidAITech/ROS-Academy-for-Beginners 
 ## Usage
 ```sh
 $ mkdir catkin_sim  

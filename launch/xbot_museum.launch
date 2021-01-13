@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="robot" default="xbot-u"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+
+  <!-- Start Gazebo with a blank world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find xbot_stereo_imu_sim)/worlds/museum.world"/>
+    <!--arg name="world_name" value="$(find turtlebot_sim)/worlds/playground.world"/-->
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Oh, you wanted a robot? -->
+  <include file="$(find xbot_stereo_imu_sim)/launch/include/$(arg robot).launch.xml" />
+
+  <!--node    name="rviz"    pkg="rviz"    type="rviz"    args="-d $(find xbot_stereo_imu_sim)/urdf_gazebo.rviz" /-->
+  
+</launch>

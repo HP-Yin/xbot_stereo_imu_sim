@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="xbot_stereo_imu_sim" type="robot_keyboard_teleop.py" name="robot_keyboard_teleop" output="screen" />
+
+</launch>

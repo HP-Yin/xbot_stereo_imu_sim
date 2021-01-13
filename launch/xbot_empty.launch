@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="robot" default="xbot-u"/>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find xbot_stereo_imu_sim)/worlds/my_empty_world.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Oh, you wanted a robot? -->
+  <include file="$(find xbot_stereo_imu_sim)/launch/include/$(arg robot).launch.xml" />
+
+</launch>

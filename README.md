@@ -15,10 +15,12 @@ $ roslaunch xbot_stereo_imu_sim stereo_imu_node.launch
 ```
 new terminal  
 ```sh
+$ source devel/setup.bash  
 $ roslaunch xbot_stereo_imu_sim stereo_imu_node.launch  
 ```
 If you want to control the robot by keyboard:  
 new terminal  
 ```sh
+$ source devel/setup.bash  
 $ roslaunch xbot_stereo_imu_sim keyboard_teleop.launch 
 ```
